@@ -49,7 +49,9 @@ function MatchingGame({ data }: { data: Record<string, string>}) {
 
     // Render the main game content
     return (
-        <>
+        <div className="container">
+                <h3>Original</h3>
+                <p>user has to click to reset state to default</p>
             {items.map(item =>
                 <button key={item.data}
 
@@ -93,7 +95,7 @@ function MatchingGame({ data }: { data: Record<string, string>}) {
                 </button>
             )}
             
-        </>
+        </div>
     );
 }
 

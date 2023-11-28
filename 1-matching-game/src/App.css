@@ -2,17 +2,37 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid white;
+  padding: 2rem 2rem;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+.container:first-of-type {
+  margin-right: 2rem;
+}
+
 .btn {
   background-color: white;
   color: #282c34;
-  padding: 5px 15px;
+  padding: 10px 15px;
   width: 300px;
 }
 

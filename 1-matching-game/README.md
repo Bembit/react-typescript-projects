@@ -150,5 +150,31 @@ I really should do this settimeout feature because that would be the only thing 
     -need new bgcolorstate "disabled"
     -getItemClassname add disabled
     -disable all the btns for 1sec when reached 2 selected and wrong items
-    -more refactor? pretty readable
-    -add data.json with more data, pull random max 5 each game 
+
+9. added a variant with a useEffect as MatchingGameVariant.tsx
+    
+    I didn't need a disabled state on types, no additional css classes required, just a boolean useState to check if the buttons should be disabled or not
+
+```javascript
+	const [disabled, setDisabled] = useState<boolean>(false);
+```
+    so now if we click on the wrong button pair, we'll have a .8 sec red bg color, we are unable to select during the timeout, and then it resets back to default
+
+```javascript
+	// Use useEffect to handle the .8-second delay after the second click
+	useEffect(() => {
+		if (disabled) {
+		const timeoutId = setTimeout(() => {
+			// Enable buttons and reset the state after .8 seconds
+			setDisabled(false);
+			setSelected(undefined);
+			setItems((items) =>
+				items.map((i) => (i.state === 'ERROR' ? { ...i, state: 'DEFAULT' } : i))
+			);
+		}, 800);
+
+		// Clear the timeout if the component is unmounted
+			return () => clearTimeout(timeoutId);
+		}
+	}, [disabled]);
+```
