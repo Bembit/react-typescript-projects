@@ -1,10 +1,11 @@
-### tasks and app desc
+# Matching Game Tasks and Short App Description
 
-player needs to match a country to its capital by clicking on appropriate buttons
+Players need to match a country to its capital by clicking on the appropriate buttons.
 
-1. your components should recieve a data prop in the following format.
-    an object with the corresponding answer, where the keys are the names of the countries and the values of each key is the capital of the country
+## Tasks
 
+1. **Receive Data Prop**
+   - Components should receive a `data` prop in the specified format.
     ```javascript
     <CountryCapitalGame data={{Germany: "Berlin", Hungary: "Budapest", France: "Paris"}}></CountryCapitalGame>
     ```
@@ -12,9 +13,8 @@ player needs to match a country to its capital by clicking on appropriate button
     function CountryCapitalGame({ data }: { data: Record<string, string>}) {  };
     ```
 
-2. a button should be displayed for each country and each capital. so the example above would return the buttons:
-    Germany, Berlin, Hungary, Budapest, France, Paris
-
+2. **Render Buttons for Each Country and Capital**
+   - Display a button for each country and each capital.
     ```javascript
     const countries = Object.keys(data)
     const capitals = Object.values(data)
@@ -26,10 +26,8 @@ player needs to match a country to its capital by clicking on appropriate button
     )}
     ```
 
-3. should be rendered on screen randomly, random order
-    
-    https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/#:~:text=By%20subtracting%200.5%20from%20the,method%20shuffles%20the%20array%20randomly.
-
+3. **Render Randomly Ordered Buttons**
+   - Render buttons on the screen in a random order.
     ```typescript
     const shuffle = (array: string[]) => { 
         return array.sort(() => Math.random() - 0.5); 
@@ -46,9 +44,8 @@ player needs to match a country to its capital by clicking on appropriate button
     }
     ```
 
-4. on btn click, change its bg to blue to indicate it's selected
-
-    add an onClick listener
+4. **Change Button Background on Click**
+   - Change the background color of a button to blue on click.
     ```javascript
     onClick={() => {
         // do things
@@ -70,10 +67,9 @@ player needs to match a country to its capital by clicking on appropriate button
     ).sort(() => Math.random() - 0.5) as Items[]
     ```
 
-5. clicking another btn should:
-    - if remove both buttons from the dom if it's a match
-    - else: set the bg color of both to red if the answer is wrong
-
+5. **Handle Matching and Mismatching**
+   - Remove both buttons from the DOM if it's a match.
+   - Set the background color of both to red if the answer is wrong.
     ```javascript
      else {
         if (selected.data === data[item.data] || data[selected.data] === item.data) {
@@ -86,8 +82,8 @@ player needs to match a country to its capital by clicking on appropriate button
         className={item.state === 'SELECTED' ? 'selected btn' : item.state === 'ERROR' ? 'error btn' : 'default btn'}>
     ```
 
-4. 5. 6. refactor class selection by state
-
+6. **Refactor**
+   - Refactor class selection based on the state.
     ```typescript
         const getItemClassName = (item: Cards): string => {
             if (item.state === 'SELECTED') {
@@ -102,8 +98,8 @@ player needs to match a country to its capital by clicking on appropriate button
         className={getItemClassName(item)}
     ```
 
-6. assuming the previously selected pair was wrong, clicking another btn should restore the default bg color of the wrong pair and set the bg color of the clicked btn to blue
-
+7. **Restore Default Background on Second Wrong Click**
+   - Restore the default background color of the wrong pair on a second wrong click.
     ```javascript
     onClick={() => {
 
@@ -124,8 +120,8 @@ player needs to match a country to its capital by clicking on appropriate button
         }));
     ```
 
-7. when the are no more buttons, alert or display congrats.
-
+8. **Congratulate on Game Over**
+   - Display a congratulatory message when there are no more buttons.
     ```javascript
     if (gameOver) {
         return <><div>Game Over<div><button onClick={() => {setItems(randomizedItems)}}>Restart</button></div></div></>
@@ -136,8 +132,8 @@ player needs to match a country to its capital by clicking on appropriate button
             {items.map(item =>
     ```
 
-8. export your component as the default export.
-
+9. **Export Component**
+   - Export the component as the default export.
     ```javascript
     export default MatchingGame;
     ```
@@ -150,8 +146,9 @@ I really should do this settimeout feature because that would be the only thing 
     -need new bgcolorstate "disabled"
     -getItemClassname add disabled
     -disable all the btns for 1sec when reached 2 selected and wrong items
+    -add 3 lives?
 
-9. added a variant with a useEffect as MatchingGameVariant.tsx
+10. Added a variant with a useEffect as MatchingGameVariant.tsx
     
     I didn't need a disabled state on types, no additional css classes required, just a boolean useState to check if the buttons should be disabled or not
 
