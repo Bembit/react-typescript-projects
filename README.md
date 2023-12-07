@@ -1,15 +1,19 @@
 ## react-interview-projects
 
-Working through various interview tasks found around the web for fun. Also a good TypeScript practice.
+Exploring **bite-sized interview tasks** for both enjoyment and TypeScript practice. Focusing on small, manageable projects that **can be completed within an hour or two.**
 
-#### If I wanted to be real honest:
+*Don't expect polished UX designs or groundbreaking innovations – it's all about the quick challenges.*
 
-<img src="https://github.com/Bembit/react-interview-projects/blob/main/garry.png" width="100%">
+### <a href="/1-matching-game/">1. Matching Game.</a>
+  - Game involves pairing countries with their corresponding capitals.
+  - Visual feedback for correct matches and subtle notification for incorrect answers.
+  - <a href="/1-matching-game/README.md">README</a>
+<img src="https://github.com/Bembit/react-interview-projects/blob/main/1.png" width="35%">
 
-### 1. <a href="/1-matching-game/">Matching Games with crazy detailed readme and comments.</a>
-<img src="https://github.com/Bembit/react-interview-projects/blob/main/1.png" width="70%">
+### <a href="/1-matching-game/"> 2. wip - Game Library </a>
+<img src="https://github.com/Bembit/react-interview-projects/blob/main/2.png" width="35%">
 
-### 2. soon - game library
-
-### 3. <a href="/3-food-ordering/">Food Menu with my signature 15 minute CSS design.</a>
-<img src="https://github.com/Bembit/react-interview-projects/blob/main/3.png" width="70%">
+### <a href="/3-food-ordering/">3. Food Menu / Order</a>
+  - The idea is to allow users to add items to an "orders list", modify quantities or remove orders as needed.
+  - <a href="/3-food-ordering/README.md">README</a>
+<img src="https://github.com/Bembit/react-interview-projects/blob/main/3.png" width="35%">
