@@ -10,7 +10,7 @@ Exploring **bite-sized interview tasks** for both enjoyment and TypeScript pract
   - <a href="/1-matching-game/README.md">README</a>
 <img src="https://github.com/Bembit/react-interview-projects/blob/main/1.png" width="35%">
 
-### <a href="/1-matching-game/"> 2. wip - Game Library </a>
+### <a href="/"> 2. wip - Game Library </a>
 <img src="https://github.com/Bembit/react-interview-projects/blob/main/2.png" width="35%">
 
 ### <a href="/3-food-ordering/">3. Food Menu / Order</a>
