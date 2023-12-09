@@ -6,6 +6,7 @@ import Library from './components/Library';
 import Shop from './components/Shop';
 import Nav from './components/Nav';
 import GameDetails from './components/GameDetails';
+import NotFound from './components/NotFound';
 
 export interface GameItem {
 	id: number;
@@ -22,16 +23,20 @@ function App() {
 
 	const [claimed, setClaimed] = useState<GameItem[]>([]);
 
+	// Function to check if a game is claimed
+	const isGameClaimed = (gameId: number) => claimed.some((claimedGame) => claimedGame.id === gameId);
 
 	return (
 		<BrowserRouter>
 			<Nav />
 			<Routes>
 				{/* Main route as the shop */}
-				<Route path="/" element={<Shop games={games} claimed={claimed} setClaimed={setClaimed} />} />
-				<Route path="/library" element={<Library games={games} claimed={claimed} setClaimed={setClaimed} />} />
+				<Route path="/" element={<Shop games={games} claimed={claimed} setClaimed={setClaimed} isGameClaimed={isGameClaimed} />} />
+				<Route path="/library" element={<Library games={games} claimed={claimed} setClaimed={setClaimed} isGameClaimed={isGameClaimed} />} />
 				{/* Add a route for dynamic route game.id details */}
-				<Route path="/:id" element={<GameDetails games={games} />} />
+				<Route path="/:id" element={<GameDetails games={games} claimed={claimed} setClaimed={setClaimed} isGameClaimed={isGameClaimed} />} />
+				{/* Add a catch-all route for 404 */}
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	);
