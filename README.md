@@ -6,14 +6,20 @@ Exploring **bite-sized interview tasks** for both enjoyment and TypeScript pract
 
 ### <a href="/1-matching-game/">1. Matching Game.</a>
   - Game involves pairing countries with their corresponding capitals.
-  - Visual feedback for correct matches and subtle notification for incorrect answers.
+  - Subtle notification for incorrect answers.
   - <a href="/1-matching-game/README.md">README</a>
+  - <a href="/">Soon - Live Vercel</a>
 <img src="https://github.com/Bembit/react-interview-projects/blob/main/1.png" width="35%">
 
-### <a href="/"> 2. wip - Game Library </a>
+### <a href="/2-game-library/"> 2. Game Library </a>
+  - Users can claim games, view their libraries, remove games.
+  - Routing and 404s.
+  - <a href="/2-game-library/README.md">README</a>
+  - <a href="/">Soon - Live Vercel</a>
 <img src="https://github.com/Bembit/react-interview-projects/blob/main/2.png" width="35%">
 
 ### <a href="/3-food-ordering/">3. Food Menu / Order</a>
-  - The idea is to allow users to add items to an "orders list", modify quantities or remove orders as needed.
+  - Allow users to add items to an "orders list", modify quantities or remove orders as needed.
   - <a href="/3-food-ordering/README.md">README</a>
+  - <a href="/">Soon - Live Vercel</a>
 <img src="https://github.com/Bembit/react-interview-projects/blob/main/3.png" width="35%">
