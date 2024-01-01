@@ -21,8 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# self
-todolist.txt
-garry.png
-/4-skill-tree/README.md

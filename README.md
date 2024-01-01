@@ -23,3 +23,9 @@ Exploring **bite-sized interview tasks** for both enjoyment and TypeScript pract
   - <a href="/3-food-ordering/README.md">README</a>
   - <a href="/">Soon - Live Vercel</a>
 <img src="https://github.com/Bembit/react-interview-projects/blob/main/3.png" width="35%">
+
+### <a href="/4-skill-tree/">WIP 4. MMO Talent Calculator</a>
+  - tbc.
+  - <a href="/">README</a>
+  - <a href="/">Soon - Live Vercel</a>
+<img src="https://github.com/Bembit/react-interview-projects/blob/main/4.png" width="35%">

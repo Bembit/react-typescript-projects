@@ -1,0 +1,53 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.skill-tree-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.skill-tree {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.skill {
+	border: 1px solid black;
+}
+
+.skill-row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	user-select: none;
+  }
+  
+.skill {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+}
+  
+.skill-row.selected {
+	background-color: #4caf50;
+	color: #fff;
+}
+
+.skill:hover {
+	/* Add styling for hover effect */
+}
+  
