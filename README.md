@@ -1,8 +1,6 @@
 ## react-interview-projects
 
-**On Pause as I'm currently working on a project.**  
-
-Exploring **bite-sized interview tasks** for both enjoyment and TypeScript practice. Focusing on small, manageable projects that **can be completed within an hour or two.**
+Exploring **bite-sized tasks** for both enjoyment and TypeScript practice. Focusing on small, manageable projects that **can be completed within an hour or two.**
 
 *Don't expect polished UX designs or groundbreaking innovations – it's all about the quick challenges.*
 
